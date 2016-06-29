@@ -47,7 +47,7 @@ var msg = {}; //必写
 msg.page_url = 'XXX'; //非必填
 msg.event_type = 'XXX';  //必填
 msg.event_value = 'XXX'; //非必填，不需要特殊标记的时候该行代码可以不写
-msg.target = document.getElementById('XXX'); //不可使用JQuery对象
+msg.target = document.getElementById('XXX'); //非必填，不可使用JQuery对象
 _taq.push(msg)
 >>```
 >> ##### 注意事项：
