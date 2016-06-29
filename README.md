@@ -45,14 +45,14 @@
 var msg = {};
 msg.page_url = 'ur url';
 msg.event_type = 'phone';  //必填
-msg.event_value = '10086'; //非必填
+msg.event_value = '10086'; //非必填，不需要特殊标记的时候该行代码可以不写
 msg.target = document.getElementById('xx'); //不可使用JQuery对象
 _taq.push(msg)
 >>```
 >> ##### 注意事项：
 >>      1、event_type为必填项，目前可选为：phone、map、form
 >>      2、page_url非必填，默认是当前页面的url
->>      3、event_value与在HTML中触发一样
+>>      3、event_value与在HTML中触发一样，参见上方'tt-data-eventvalue'
 >>      4、target非必填，不可使用JQuery对象
 
 ***
