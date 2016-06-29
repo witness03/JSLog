@@ -27,33 +27,35 @@
 >> ##### 应用场景：用户点击某个组件一次就发送一次
 >> ##### 使用方法：
 >> ```
-<div tt-data-click="click" tt-data-url="url" tt-data-eventtype="phone" tt-data-eventvalue="10086" tt-data-options="">
+<div tt-data-click="XXX" tt-data-url="XXX" tt-data-eventtype="XXX" tt-data-eventvalue="XXX" tt-data-options="XXX">
 </div>
 >>```
 >> ##### 注意事项：
 >>      1、您可以使用任意的DOM，而不仅仅是div
 >>      2、tt-data-click为必填
->>      3、tt-data-eventtype为必填，目前可选为：phone、map、form
->>      4、tt-data-url为非必填，主要用于识别您监测的网页，不填会默认为当前url
+>>      3、tt-data-url为非必填，主要用于识别您要监测的网页。该段代码可以不写，默认取当前页面的url。
+>>      4、tt-data-eventtype为必填，目前可选为：phone、map、form
 >>      5、tt-data-eventvalue为非必填，您可以填入以用于识别一个url中的不同的事件，例如您需要统计同一页面中的两个事件“抽奖”和“投票”，那么您可以分别将tt-data-eventvalue定义为lottery和poll
 >>      6、tt-data-options为非必填
+>>      7、非必填：非必填的代码段均表示可以不写
 ***
 > #### b. JS方式触发
 >> ##### 应用场景：某一事件成功了才会统计，比如申请信用卡，表单提交成功后才发送log，而不是每点击提交按钮一次就发送。
 >> ##### 使用方法：(在合适的地方执行）
 >> ```
-var msg = {};
-msg.page_url = 'ur url';
-msg.event_type = 'phone';  //必填
-msg.event_value = '10086'; //非必填，不需要特殊标记的时候该行代码可以不写
-msg.target = document.getElementById('xx'); //不可使用JQuery对象
+var msg = {}; //必写
+msg.page_url = 'XXX'; //非必填
+msg.event_type = 'XXX';  //必填
+msg.event_value = 'XXX'; //非必填，不需要特殊标记的时候该行代码可以不写
+msg.target = document.getElementById('XXX'); //不可使用JQuery对象
 _taq.push(msg)
 >>```
 >> ##### 注意事项：
 >>      1、event_type为必填项，目前可选为：phone、map、form
->>      2、page_url非必填，默认是当前页面的url
->>      3、event_value与在HTML中触发一样，参见上方'tt-data-eventvalue'
->>      4、target非必填，不可使用JQuery对象
+>>      2、page_url为非必填，默认是当前页面的url
+>>      3、event_value逻辑与HTML方式触发一样，参见上方'tt-data-eventvalue'
+>>      4、target为非必填，不可使用JQuery对象
+>>      5、非必填：非必填的代码段均表示可以不写
 
 ***
 
