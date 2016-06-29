@@ -49,6 +49,11 @@ _taq.push(msg)
 >>      2、page_url非必填，默认是当前页面的url
 >>      3、event_value与在HTML中触发一样
 >>      4、target非必填，不可使用JQuery对象
+
+***
+
 ### 三、常见问题
 #### Q1、HTML中使用了第一种方式进行触发，还需要使用在JS中触发的方式吗？
       不需要，两种方式分别对应不同的应用场景，第一种适用于点击，第二种适用于非点击，需要在JS中进行处理其他逻辑然后才发送的场景
+#### Q2、event_type或tt-data-eventtype可以随意定义吗？
+     不能，这些只能使用已有的form、phone、map，之后可能会新增
