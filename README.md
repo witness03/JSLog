@@ -27,7 +27,7 @@
 >> ##### 应用场景：用户点击某个组件一次就发送一次
 >> ##### 使用方法：
 >> ```
-<div tt-data-click="XXX" tt-data-url="XXX" tt-data-eventtype="XXX" tt-data-eventvalue="XXX" tt-data-options="XXX">
+<div tt-data-click tt-data-url="XXX" tt-data-eventtype="XXX" tt-data-eventvalue="XXX" tt-data-options="XXX">
 </div>
 >>```
 >> ##### 注意事项：
