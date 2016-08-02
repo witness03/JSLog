@@ -15,7 +15,7 @@
       (function() {
       	_tt_config = true;
         var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
-        ta.src = document.location.protocol + '//' + 's0.pstatp.com/adstatic/resource/landing_log/dist/1.2.1/static/js/toutiao-tetris-analytics.js';
+        ta.src = document.location.protocol + '//' + 's0.pstatp.com/adstatic/resource/landing_log/dist/1.2.6/static/js/toutiao-tetris-analytics.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ta, s);
     })();
 </script>
