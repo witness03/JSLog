@@ -12,20 +12,20 @@
 在HTML的头部加入如下代码：
 ```
 <script type="text/javascript">
-      (function() {
-            _tt_config = true;
+      (function(root) {
+            root._tt_config = true;
             var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
             ta.src = document.location.protocol + '//' + 's0.pstatp.com/adstatic/resource/landing_log/dist/1.2.6/static/js/toutiao-tetris-analytics.js';
             ta.onerror = function () {
                 var request = new XMLHttpRequest();
-                var web_url = window.location.href.replace(/&/g, '%26').replace(/#/g, '%23');
+                var web_url = window.encodeURIComponent(window.location.href);
                 var js_url  = ta.src;
                 var url = 'http://ad.toutiao.com/link_monitor/cdn_failed?web_url=' + web_url + '&js_url=' + js_url;
                 request.open('GET', url, true);
                 request.send(null);
             }
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ta, s);
-      })();
+      })(window);
 </script>
 ```
 ***
